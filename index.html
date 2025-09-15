@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Srijan Pandey — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6ee7b7;
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,#071026 0%, #071633 100%);}
+    a{color:var(--accent);text-decoration:none}
+    header{position:fixed;left:0;right:0;top:16px;display:flex;justify-content:center;z-index:50}
+    .nav{width:92%;max-width:1100px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter:blur(6px);border-radius:14px;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;border:1px solid rgba(255,255,255,0.04)}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#6ee7b7,#60a5fa);display:flex;align-items:center;justify-content:center;color:#052022;font-weight:700;font-size:18px}
+    nav a{margin:0 8px;font-weight:600;color:var(--muted)}
+    nav a.active{color:var(--accent)}
+    main{padding:120px 16px 80px}
+    .container{max-width:1100px;margin:0 auto}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+    .card{background:var(--card);border-radius:14px;padding:22px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+    .intro h1{font-size:28px;margin:0 0 8px}
+    .intro p{color:var(--muted);line-height:1.5}
+    .meta{display:flex;gap:12px;margin-top:14px}
+    .pill{background:var(--glass);padding:8px 10px;border-radius:999px;font-weight:600;color:var(--muted);font-size:13px;border:1px solid rgba(255,255,255,0.02)}
+
+    .edu{margin-top:18px;padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px dashed rgba(255,255,255,0.02)}
+    .edu h3{margin:0 0 6px}
+    .edu p{margin:0;color:var(--muted)}
+
+    /* Skills */
+    .skills-grid{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+    .skill{background:var(--glass-2);padding:10px 12px;border-radius:10px;font-weight:600;color:#dff6ec;border:1px solid rgba(255,255,255,0.02)}
+
+    .certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px}
+    .cert{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.02)}
+    .cert img{width:100%;height:110px;object-fit:cover;border-radius:8px}
+    .cert small{display:block;margin-top:8px;color:var(--muted)}
+
+    /* Projects */
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .proj{padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.03)}
+    .proj h4{margin:0 0 6px}
+    .proj p{color:var(--muted);font-size:14px}
+    .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+
+    footer{text-align:center;color:var(--muted);margin-top:40px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .card.right{order:-1}
+      header{top:10px}
+    }
+
+    /* small touches */
+    .btn{display:inline-flex;gap:8px;align-items:center;padding:10px 12px;border-radius:10px;background:linear-gradient(90deg,#6ee7b7,#60a5fa);color:#03121a;font-weight:700;border:none;cursor:pointer}
+    .muted-small{color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav container">
+      <div class="brand">
+        <div class="avatar">
+            <img src="https://raw.githubusercontent.com/sripandeyy/portfolio-assets/main/profilepic.jpg" 
+                 alt="Srijan Pandey" 
+                 style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+          </div>
+          
+        <div>
+          <div style="font-weight:700">Srijan Pandey</div>
+          <div style="font-size:12px;color:var(--muted);">B.Tech CSE | Lovely Professional University | Class of 2027</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Home -->
+    <section id="home" class="hero">
+      <div class="card intro">
+        <h1>Hi, I'm <span style="color:var(--accent)">Srijan</span> — a CSE student building web & AI projects.</h1>
+        <p>I design and develop interactive web applications, and I love solving problems using full-stack JavaScript and Python. Currently pursuing B.Tech in Computer Science at Lovely Professional University (expected 2027).</p>
+
+        <div class="meta">
+          <div class="pill">Location: India</div>
+          <div class="pill">Open to internships</div>
+          <div class="pill">Contact: 9214888105</div>
+        </div>
+
+        <div class="edu">
+          <h3>Education</h3>
+          <p><strong>Lovely Professional University</strong> — B.Tech, Computer Science and Engineering (2023 - 2027)</p>
+          <p class="muted-small">Relevant coursework: Data Structures & Algorithms, Operating Systems, Databases, Web Development</p>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:10px;align-items:center">
+          <a class="btn" href="mailto:srijanpandey2969@gmail.com">Email</a>
+          <a class="btn" style="background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--accent)" href="#projects">See Projects</a>
+        </div>
+      </div>
+
+      <div class="card right">
+        <h3 style="margin-top:0">Profile</h3>
+        <p class="muted-small">Quick links & highlights</p>
+        <div style="margin-top:12px">
+          <div style="display:flex;gap:10px;align-items:center">
+            <img src="https://raw.githubusercontent.com/sripandeyy/portfolio-assets/main/profilepic.jpg" 
+       alt="Srijan Pandey" 
+       style="width:70px; height:70px; border-radius:50%; object-fit:cover; margin-bottom:10px;">
+            <div>
+              <div style="font-weight:700">Srijan Pandey</div>
+              <div class="muted-small">srijanpandey2969@gmail.com</div>
+              <div class="muted-small">GitHub: sripandeyy</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px">
+          <h4 style="margin:0 0 8px">Education Snapshot</h4>
+          <p class="muted-small">CGPA: — (add if you want)</p>
+          <p class="muted-small">Courses: Web Dev, OS, Algorithms</p>
+        </div>
+
+        <div style="margin-top:14px">
+          <h4 style="margin:0 0 8px">Availability</h4>
+          <p class="muted-small">Looking for internships and small freelance projects. Open to remote work.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills + Certificates -->
+    <section id="skills" style="margin-top:34px">
+      <div class="card">
+        <h2 style="margin:0">Skills & Certificates</h2>
+        <p class="muted-small" style="margin-top:8px">Tech stack, tools and certificates </p>
+
+        <div style="margin-top:12px">
+          <div class="skills-grid">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">Express</div>
+            <div class="skill">Python</div>
+            <div class="skill">Flask / FastAPI</div>
+            <div class="skill">SQL / MongoDB</div>
+            <div class="skill">Git</div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px">
+          <h3 style="margin:0">Certificates</h3>
+          <div class="certificates">
+
+            <div class="cert-card">
+              <h4>ChatGPT Made Easy: AI Essentials for Beginners (Udemy)</h4>
+              <p>Completed a beginner-friendly course on ChatGPT, exploring AI basics, prompt crafting, and practical applications of generative AI in everyday use.</p>
+              <a href="https://raw.githubusercontent.com/sripandeyy/portfolio-assets/main/1chatgpt.pdf" target="_blank">View Certificate</a>
+            </div>
+          
+            <div class="cert-card">
+              <h4>Master Generative AI & Generative AI Tools (ChatGPT & More) (Udemy)</h4>
+              <p>A comprehensive course on generative AI, covering ChatGPT and other tools, with hands-on projects demonstrating real-world applications of AI technologies.</p>
+              <a href="https://raw.githubusercontent.com/sripandeyy/portfolio-assets/main/2genai.pdf" target="_blank">View Certificate</a>
+            </div>
+          
+            <div class="cert-card">
+              <h4>Build Generative AI Apps and Solutions with No-Code Tools (Udemy)</h4>
+              <p>Learned to design and deploy AI-powered applications using no-code platforms, enabling rapid prototyping, automation, and business-focused AI solutions.</p>
+              <a href="https://raw.githubusercontent.com/sripandeyy/portfolio-assets/main/3buildgenai.pdf" target="_blank">View Certificate</a>
+            </div>
+          
+            <div class="cert-card">
+              <h4>Computational Theory: Language Principle & Finite Automata Theory (Onwingspan)</h4>
+              <p>Studied computational theory fundamentals, including automata, formal grammar, and language principles, building strong foundations in theoretical computer science.</p>
+              <a href="https://raw.githubusercontent.com/sripandeyy/portfolio-assets/main/4comptul%20(1).pdf" target="_blank">View Certificate</a>
+            </div>
+          
+            <div class="cert-card">
+              <h4>The Bits and Bytes of Computer Networking (Google | Coursera)</h4>
+              <p>Gained hands-on knowledge of networking, covering protocols, IP addressing, troubleshooting, and services essential to understanding modern computer networks.</p>
+              <a href="https://raw.githubusercontent.com/sripandeyy/portfolio-assets/main/Coursera%208W06U9J9ET3P.pdf" target="_blank">View Certificate</a>
+            </div>
+          
+            <div class="cert-card">
+              <h4>Introduction to Hardware and Operating Systems (IBM | Coursera)</h4>
+              <p>Learned the essentials of computer hardware and operating systems, including architecture, functionality, and integration, providing a strong foundation in IT infrastructure.</p>
+              <a href="https://raw.githubusercontent.com/sripandeyy/portfolio-assets/main/Coursera%20MSVURG7YU56H.pdf" target="_blank">View Certificate</a>
+            </div>
+          
+            <div class="cert-card">
+              <h4>General Knowledge for Teachers – Reading (Saylor Academy)</h4>
+              <p>Enhanced reading comprehension and analytical skills tailored for educators, focusing on effective knowledge-building techniques to support teaching and professional growth.</p>
+              <a href="https://raw.githubusercontent.com/sripandeyy/portfolio-assets/main/certificatelearning.pdf" target="_blank">View Certificate</a>
+            </div>
+          
+            <div class="cert-card">
+              <h4>Foundations of Cybersecurity (Google | Coursera)</h4>
+              <p>Acquired essential knowledge of cybersecurity concepts, risk management, and security frameworks to protect digital systems and defend against cyber threats.</p>
+              <a href="https://raw.githubusercontent.com/sripandeyy/portfolio-assets/main/cyberseq_certificate.pdf" target="_blank">View Certificate</a>
+            </div>
+          
+            <div class="cert-card">
+              <h4>SQL and Relational Databases 101 (IBM | CognitiveClass.ai)</h4>
+              <p>Developed skills in designing, querying, and managing relational databases using SQL, enabling efficient data analysis and structured information management.</p>
+              <a href="https://raw.githubusercontent.com/sripandeyy/portfolio-assets/main/sqlcertificate.pdf" target="_blank">View Certificate</a>
+            </div>
+          
+          </div>
+          
+          
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" style="margin-top:34px">
+      <div class="card">
+        <h2 style="margin:0">Projects</h2>
+        <p class="muted-small" style="margin-top:8px">Short descriptions and tech used. Add GitHub links to each project card.</p>
+
+        <div style="margin-top:12px" class="projects">
+          <div class="proj">
+            <h4>Video Chat App</h4>
+            <p>Realtime synced YouTube watch party with video chat, built with WebRTC and Node.js.</p>
+            <div class="tags"><span class="tag">WebRTC</span><span class="tag">Node.js</span><span class="tag">Socket.io</span></div>
+            <div style="margin-top:10px"><a href="https://github.com/sripandeyy/Video-Chat-App">GitHub</a></div>
+          </div>
+
+          <div class="proj">
+            <h4>Multithreading Simulator</h4>
+            <p>Visual simulator for thread scheduling and synchronization techniques for learning OS concepts.</p>
+            <div class="tags"><span class="tag">Java</span><span class="tag">Threads</span><span class="tag">Canvas</span></div>
+            <div style="margin-top:10px"><a href="#">GitHub</a></div>
+          </div>
+
+          <div class="proj">
+            <h4>Picture Gallery App</h4>
+            <p>Photo gallery with gesture recognition, edit & save features, built for desktop and mobile.</p>
+            <div class="tags"><span class="tag">JavaScript</span><span class="tag">TensorFlow.js</span><span class="tag">PWA</span></div>
+            <div style="margin-top:10px"><a href="#">GitHub</a></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <p>Made with ♥ by Srijan Pandey — <span class="muted-small">Email: srijanpandey2969@gmail.com</span></p>
+    </footer>
+  </main>
+
+  <script>
+    // Smooth scroll and active nav link
+    document.querySelectorAll('nav a').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        document.querySelectorAll('nav a').forEach(x=>x.classList.remove('active'));
+        a.classList.add('active');
+        const id = a.getAttribute('href');
+        document.querySelector(id).scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    });
+
+    // highlight on scroll
+    const sections = Array.from(document.querySelectorAll('main section'));
+    window.addEventListener('scroll',()=>{
+      const scrollPos = window.scrollY + 140;
+      for(const s of sections){
+        const top = s.offsetTop;
+        const bottom = top + s.offsetHeight;
+        const id = '#'+s.id;
+        const link = document.querySelector('nav a[href="'+id+'"]');
+        if(scrollPos>=top && scrollPos<bottom){
+          document.querySelectorAll('nav a').forEach(x=>x.classList.remove('active'));
+          if(link) link.classList.add('active');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
