@@ -5,6 +5,7 @@
   --accent-secondary: #818cf8;
   --glass: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
+  --card: rgba(255, 255, 255, 0.02);
   --btn-grad: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
   --text-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #f472b6 100%);
 }
@@ -162,8 +163,8 @@ header {
 }
 
 .nav {
-  width: 90%;
-  max-width: 1200px;
+  width: 96%;
+  max-width: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -565,9 +566,15 @@ nav a.active {
 /* Hero Section */
 .hero {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 6fr 4fr;
   gap: 40px;
-  align-items: start;
+  align-items: center;
+}
+
+.container {
+  width: 96%;
+  max-width: none;
+  margin: 0 auto;
 }
 
 .card {
@@ -1054,13 +1061,9 @@ nav a.active {
 }
 
 /* Responsive */
-@media (max-width: 960px) {
+@media (max-width: 768px) {
   .hero {
     grid-template-columns: 1fr;
-  }
-
-  .card.right {
-    order: -1;
   }
 }
 
