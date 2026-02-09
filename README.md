@@ -46,9 +46,11 @@ No bloated frameworks. Lightweight, readable, and maintainable.
 🎯 Clean UI with focus on usability and readability
 ├── index.html
 ├── css/
-│   └── styles.css
+│   └── style.css
 ├── js/
 │   └── script.js
 ├── assets/
-│   └── images, icons
+│   ├── images/
+│   ├── certificates/
+│   └── cv/
 └── README.md
